@@ -1,0 +1,19 @@
+{
+    "name": "cocina-andaluza",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "npm run clean && parcel src/index.html --open",
+        "build": "npm run clean && parcel build src/index.html",
+        "clean": "rimraf dist .parcel-cache",
+        "parcel:dev": "parcel src/index.html --open",
+        "parcel:build": "parcel build src/index.html"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "parcel": "^2.13.3",
+        "rimraf": "^6.0.1"
+    }
+}
