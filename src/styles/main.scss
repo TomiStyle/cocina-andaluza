@@ -1,11 +1,132 @@
+/* Variables */
+$primary-color: #fce5cd;
+$secondary-color: #f9b872;
+$highlighted-color: #6cdbe9;
+// Colores de muestra
+// #F9B872, #FAE7A5, #f7d7b5, #fce5cd, #b6e1e7
+/* Estilos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: $highlighted-color;
+}
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding: 20px;
+    background-color: $primary-color;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header y Navegación */
+.header {
+    background-color: $secondary-color;
+    padding: 1rem;
+    color: white;
+    position: relative;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-menu a:hover {
+    color: $highlighted-color;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 2rem 0;
+    min-height: calc(100vh - 200px);
+}
+
+/* Footer */
+.footer {
+    background-color: $secondary-color;
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: $secondary-color;
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+
+        &.active {
+            display: flex;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: auto;
+    }
 }
