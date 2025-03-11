@@ -14,6 +14,8 @@ $highlighted-a-color: #6cdbe9;
 }
 a {
     text-decoration: none;
+    color: $highlighted-color;
+    font-style: italic;
 }
 a:hover {
     color: $highlighted-a-color;
@@ -94,6 +96,87 @@ body {
     min-height: calc(100vh - 200px);
 }
 
+.container .list {
+    margin: 2rem;
+}
+
+/* Detalle */
+.recipe-hero {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    position: relative; // Importante para posicionar el título
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .title {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        font-weight: 300;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        text-align: center;
+    }
+}
+
+.recipe-content {
+    margin: 2rem 0;
+
+    p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        text-align: justify;
+    }
+    ul {
+        margin-left: 2rem;
+    }
+}
+
+.recipe-video {
+    margin: 2rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.recipe-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.recipe-card h2 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #2c2c2c;
+}
+
 /* Footer */
 .footer {
     background-color: $secondary-color;
@@ -110,6 +193,37 @@ body {
 .footer-column {
     flex: 1;
     text-align: center;
+}
+
+.swiper {
+    width: 100%;
+    // height: 300px;
+}
+.pequenno {
+    width: 60%;
+}
+.swiper-slide {
+    position: relative;
+
+    .title {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        font-weight: 300;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        z-index: 1;
+    }
 }
 
 /* Media Queries */
@@ -138,5 +252,22 @@ body {
     .hamburger {
         display: block;
         margin-left: auto;
+    }
+
+    .swiper-slide .title,
+    .recipe-hero .title {
+        font-size: 1.2rem;
+    }
+
+    .recipe-video iframe {
+        width: auto;
+    }
+
+    .pequenno {
+        width: 100%;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
