@@ -41,8 +41,19 @@
             <h1>Bienvenidos a Cocina Andalusí</h1>
             <p>
                 En esta página podrás disfrutar y aprender riquísimas y facilísimas recetas andaluzas.<br>
-                Vive la experiencia culinaria como si estuvieras en cualquier taberna andalusí.
+                Vive la experiencia culinaria como si estuvieras en cualquier taberna andalusí.<br>
+                ¡¡ Únete a nuestra mesa !!
+                <!-- <img src="./assets/images/mesa.webp" alt="Mesa con comida" class="clip-mesa"> -->
+                <picture>
+                    <source media="(max-width: 768px)" srcset="./assets/images/mesa-mobile.webp">
+                    <source media="(min-width: 769px)" srcset="./assets/images/mesa.webp">
+                    <img src="./assets/images/mesa.webp" alt="Mesa con comida" class="clip-mesa">
+                </picture>
             </p>
+            <svg class="svg-naranja" width="100" height="100" viewBox="0 0 100 100" aria-label="Naranja animada">
+                <circle class="naranja" cx="50" cy="50" r="40" fill="#FFA500"/>
+                <ellipse class="hoja" cx="50" cy="20" rx="12" ry="5" fill="#4CAF50"/>
+            </svg>
             <br>
             <h3>Recetas destacadas</h3>
             <!-- Slider main container -->
