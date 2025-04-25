@@ -34,7 +34,14 @@
             <div class="recipe-hero">
                 <div class="title">Ajo Blanco</div>
                 <!-- <img src="./assets/images/ajoblanco.webp" alt="Ajo Blanco"> -->
-                <img src="./assets/images/ajoblanco.webp" srcset="./assets/images/ajoblanco.webp 1x, ./assets/images/ajoblanco-1200.webp 2x" alt="Ajo Blanco">
+                <!-- Aplicando Resolution switching -->
+                <!-- <img src="./assets/images/ajoblanco.webp" srcset="./assets/images/ajoblanco.webp 1x, ./assets/images/ajoblanco-1200.webp 2x" alt="Ajo Blanco"> -->
+                <!-- Combinando Resolution switching y Dirección del arte-->
+                <picture>
+                    <source media="(max-width: 768px)" srcset="./assets/images/ajoblanco-mobile.webp 1x, ./assets/images/ajoblanco-mobile-800.webp 2x">
+                    <source media="(min-width: 769px)" srcset="./assets/images/ajoblanco.webp 1x, ./assets/images/ajoblanco-1200.webp 2x">
+                    <img src="./assets/images/ajoblanco.webp" alt="Ajo Blanco" class="imagen-principal">
+                </picture>
             </div>
 
             <div class="recipe-content">

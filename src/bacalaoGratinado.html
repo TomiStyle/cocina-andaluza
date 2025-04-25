@@ -34,7 +34,14 @@
             <div class="recipe-hero">
                 <div class="title">Bacalao gratinado con base de pisto</div>
                 <!-- <img src="./assets/images/bacalaoGratinado.webp" alt="Bacalao gratinado con cama de pisto"> -->
-                <img src="./assets/images/bacalaoGratinado.webp" srcset="./assets/images/bacalaoGratinado.webp 1x, ./assets/images/bacalaoGratinado-1200.webp 2x" alt="Bacalao gratinado con cama de pisto">
+                <!-- Aplicando Resolution switching -->
+                <!-- <img src="./assets/images/bacalaoGratinado.webp" srcset="./assets/images/bacalaoGratinado.webp 1x, ./assets/images/bacalaoGratinado-1200.webp 2x" alt="Bacalao gratinado con cama de pisto"> -->
+                <!-- Combinando Resolution switching y Dirección del arte-->
+                <picture>
+                    <source media="(max-width: 768px)" srcset="./assets/images/bacalaoGratinado-mobile.webp 1x, ./assets/images/bacalaoGratinado-mobile-800.webp 2x">
+                    <source media="(min-width: 769px)" srcset="./assets/images/bacalaoGratinado.webp 1x, ./assets/images/bacalaoGratinado-1200.webp 2x">
+                    <img src="./assets/images/bacalaoGratinado.webp" alt="Bacalao gratinado con cama de pisto" class="imagen-principal">
+                </picture>
             </div>
 
             <div class="recipe-content">

@@ -34,7 +34,14 @@
             <div class="recipe-hero">
                 <div class="title">Flamenquines</div>
                 <!-- <img src="./assets/images/flamenquines.webp" alt="Flamenquín cordobés"> -->
-                <img src="./assets/images/flamenquines.webp" srcset="./assets/images/flamenquines.webp 1x, ./assets/images/flamenquines-1200.webp 2x" alt="Flamenquín cordobés">
+                <!-- Aplicando Resolution switching -->
+                <!-- <img src="./assets/images/flamenquines.webp" srcset="./assets/images/flamenquines.webp 1x, ./assets/images/flamenquines-1200.webp 2x" alt="Flamenquín cordobés"> -->
+                <!-- Combinando Resolution switching y Dirección del arte-->
+                <picture>
+                    <source media="(max-width: 768px)" srcset="./assets/images/flamenquines-mobile.webp 1x, ./assets/images/flamenquines-mobile-800.webp 2x">
+                    <source media="(min-width: 769px)" srcset="./assets/images/flamenquines.webp 1x, ./assets/images/flamenquines-1200.webp 2x">
+                    <img src="./assets/images/flamenquines.webp" alt="Flamenquín cordobés" class="imagen-principal">
+                </picture>
             </div>
 
             <div class="recipe-content">

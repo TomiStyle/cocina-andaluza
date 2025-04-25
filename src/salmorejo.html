@@ -34,7 +34,14 @@
             <div class="recipe-hero">
                 <div class="title">Salmorejo cordobés</div>
                 <!-- <img src="./assets/images/salmorejo.webp" alt="Salmorejo cordobés"> -->
-                <img src="./assets/images/salmorejo.webp" srcset="./assets/images/salmorejo.webp 1x, ./assets/images/salmorejo-1200.webp 2x" alt="Salmorejo cordobés">
+                <!-- Aplicando Resolution switching -->
+                <!-- <img src="./assets/images/salmorejo.webp" srcset="./assets/images/salmorejo.webp 1x, ./assets/images/salmorejo-1200.webp 2x" alt="Salmorejo cordobés"> -->
+                <!-- Combinando Resolution switching y Dirección del arte-->
+                <picture>
+                    <source media="(max-width: 768px)" srcset="./assets/images/salmorejo-mobile.webp 1x, ./assets/images/salmorejo-mobile-800.webp 2x">
+                    <source media="(min-width: 769px)" srcset="./assets/images/salmorejo.webp 1x, ./assets/images/salmorejo-1200.webp 2x">
+                    <img src="./assets/images/salmorejo.webp" alt="Salmorejo cordobés" class="imagen-principal">
+                </picture>
             </div>
 
             <div class="recipe-content">
