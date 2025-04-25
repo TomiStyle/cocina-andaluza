@@ -226,6 +226,14 @@ body {
     }
 }
 
+.img-enlaces {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .nav-menu {
@@ -270,5 +278,9 @@ body {
 
     .recipe-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .img-enlaces {
+        max-width: 90vw;
     }
 }
